@@ -32,11 +32,19 @@ main {
         display: flex;
         flex-direction: row;
         margin-bottom: 30px;
+        & .heart {
+            margin: 0 15px;
+            padding: 20px;
+            color: black;
+        }
     }
 }
 @media screen and (max-width: 959px) {
     .menu {
     padding: 35px 20px;
+        &_header {
+            justify-content: space-around;
+        }
     }
 }
 @media screen and (min-width: 960px) {
