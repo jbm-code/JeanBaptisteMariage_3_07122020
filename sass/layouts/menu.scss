@@ -1,5 +1,7 @@
 img {
+    height: 300px;
     width: 100%;
+    object-fit: cover;
 }
 main {
     max-width: 1100px;
@@ -51,4 +53,54 @@ main {
     .menu {
         padding: 40px 30px;
     }
+}
+.choose {   
+    margin-bottom: 30px; 
+    &_title {
+        font-size:20px; 
+    }
+}
+@media screen and (min-width: 751px) {
+    .meal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: calc(100% + 10px + 10px);
+        margin-left: -10px; 
+    }
+}
+.etiket {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125); 
+    margin: 10px;
+
+    @media screen and (max-width: 751px) {
+    
+        min-width: 300px;
+        padding-right: 25px;
+        
+    }
+    @media screen and (min-width: 751px) {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 10px 0 10px;
+       
+    }
+}
+
+.line {
+    border-top: 3px solid #99e2d0;
+    display: inline-block;
+    width: 30px;
+    margin: 10px;
 }

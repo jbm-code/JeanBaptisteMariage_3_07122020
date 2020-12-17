@@ -9,12 +9,12 @@ a:visited, a:link, a:active {
     margin-left: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
-
+    text-align: center;
 }
-
-
 .operation {  
     background: white; 
+    text-align: center;
+    margin-bottom: 30px;
     &_button {        
         display: inline-block;
         text-align: center;
