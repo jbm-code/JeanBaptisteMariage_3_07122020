@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+a:visited, a:link, a:active {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  /*text-align: center;  */
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -9,28 +14,27 @@ body {
   font-size: 16px;
 }
 
-main {
-  margin: auto;
+.footer {
+  background: #353535;
+  padding: 20px;
+}
+.footer_menu {
+  display: flex;
+  flex-direction: column;
+}
+.footer a {
+  color: #f6f6f6;
+  padding: 5px;
+}
+.footer_icon {
+  margin-right: 5px;
+}
+.footer img {
+  width: auto;
+  height: 20px;
+  padding: 10px 0 10px 0;
 }
 
-h4 {
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  margin: 0;
-  text-align: left;
-  color: black;
-}
-
-@media screen and (max-width: 959px) {
-  h4 {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (min-width: 960px) {
-  h4 {
-    font-size: 2.2rem;
-  }
-}
 .header {
   position: relative;
   display: flex;
@@ -160,7 +164,7 @@ h4 {
     transform: scale(1);
   }
   90% {
-    transform: scale(1.6);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
@@ -176,18 +180,22 @@ h4 {
   margin-left: 20px;
   margin-top: 0;
 }
-.search_button {
+.search_button a {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  width: 200px;
   border-radius: 10rem;
   padding: 1rem;
-  background: linear-gradient(to top left, #a45cdc, #ea72da);
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  background: linear-gradient(to top left, #a45cdc, #FF79DA);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   border: none;
   margin: 20px;
+  transition: box-shadow 200ms linear, transform 200ms linear;
 }
-.search_button_txt {
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
+.search_button a:hover {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -300,11 +308,6 @@ main {
   margin: 10px;
 }
 
-a:visited, a:link, a:active {
-  text-decoration: none;
-  color: #000000;
-}
-
 .op {
   text-align: start;
   margin-left: 30px;
@@ -367,7 +370,8 @@ a:visited, a:link, a:active {
   background: #f6f6f6;
   justify-items: center;
   margin-top: 50px;
-  /*gap: 15px;*/
+  gap: 15px;
+  padding-bottom: 50px;
   margin: auto;
 }
 .restaurants_header {
@@ -386,12 +390,13 @@ a:visited, a:link, a:active {
   transition-duration: 0.1s;
   cursor: pointer;
   box-sizing: border-box;
-  width: 300px;
+  width: 330px;
+  height: 250px;
   margin: 10px;
   position: relative;
 }
 .restaurants_align_button_img {
-  height: 7rem;
+  height: 11rem;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
@@ -403,19 +408,19 @@ a:visited, a:link, a:active {
   border-radius: 1.25rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 1rem 1rem 1rem 1rem;
 }
-.restaurants_align_button_etiket_left_txt3 {
-  /*display: inline-block;*/
+.restaurants_align_button_etiket_left_text3 {
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  color: blueviolet;
   font-weight: bold;
+  margin: 0 0 0.3rem;
 }
-.restaurants_align_button_etiket_left_fas {
-  display: flex;
+.restaurants_align_button_etiket_left_text2 {
+  margin: 0 0 0.3rem;
 }
 .restaurants_align_button_new {
   background: #99e2d0;

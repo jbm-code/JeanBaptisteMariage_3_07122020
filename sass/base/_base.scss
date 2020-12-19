@@ -1,30 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+a:visited, a:link, a:active {
+    text-decoration: none;
+    font-family:  $font1;
+    color: $color1;
+}
+
 body {
-    
-    font-family: "Roboto", sans-serif;
-    /*text-align: center;  */  
+    font-family: $font1;  
     margin-top: 1rem;   
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
     font-size: 16px;
 }
-main {
-    margin:auto;
-}
-h4 {
-    font-family: "Shrikhand", cursive;
-    font-weight: 400;
-    margin: 0;
-    text-align: left;
-    color: black;
-}
-@media screen and (max-width: 959px) {   
-    h4 {
-        font-size: 1.8rem;
+
+.footer {
+    background: $color6;
+    padding: 20px;
+    &_menu {
+        display: flex;
+        flex-direction: column;
     }
-}
-@media screen and (min-width: 960px) {
-    h4 {
-        font-size: 2.2rem;
+    & a {
+        color: $color2;
+        padding: 5px;
+    }
+    &_icon {
+        margin-right: 5px;
+    }
+    & img {
+        width: auto;
+        height: 20px;
+        padding: 10px 0 10px 0;
     }
 }
