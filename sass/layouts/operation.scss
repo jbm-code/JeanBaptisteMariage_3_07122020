@@ -1,4 +1,22 @@
 
+
+.search {
+    background: $color2;
+    padding: 0px;
+    text-align: center;
+    &_txt1 {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 0;
+    }  
+    &_button a {
+        @include button;
+        display: inline-block;
+        width: 200px;       
+    } 
+}
+
+
 .op {
     text-align: start;
     margin-left: 30px;
