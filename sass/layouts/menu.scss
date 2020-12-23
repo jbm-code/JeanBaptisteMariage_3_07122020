@@ -74,7 +74,7 @@ main {
     display: flex;
     gap: 10px;
     flex-direction: column;
-    overflow: hidden;
+    /*overflow: hidden;*/
     cursor: pointer;
     background: white;
     margin-bottom: 10px;
@@ -87,7 +87,7 @@ main {
     /*opacity: 0;*/
     &:hover &_confirm {
                 transform: translateX(0px); }
-    &:hover &_icon  {
+    &:hover &_confirm_icon  {
                 transform: rotate(0); }
     &_name {
         font-weight: bold;
@@ -96,10 +96,11 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        text-overflow: ellipsis;
     }
     &_description {
-        overflow: hidden;
+        /*overflow: hidden;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     &_price {
         font-weight: bold;
@@ -119,6 +120,7 @@ main {
         &_icon {
             position: absolute;
             top: 0;
+            
             height: 100%;
             width: 100%;
             color: $color2;
@@ -126,8 +128,8 @@ main {
             align-items: center;
             justify-content: center;
             border-radius: 100px;
-            transform: rotate(180deg);
-            transition-duration: 400ms;
+            transform: rotate(360deg);
+            transition-duration: 2000ms;
         }
     }
     
@@ -140,6 +142,9 @@ main {
         justify-content: space-between;
         width: calc(100% + 10px + 10px);
         margin-left: -10px; 
+    }
+    .meal {
+        width: calc( 100% - 40px );
     }
 }
 

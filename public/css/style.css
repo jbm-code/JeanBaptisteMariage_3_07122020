@@ -72,6 +72,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
   color: black;
   background-color: #EAEAEA;
   -webkit-box-shadow: 0 8px 6px -6px #cfcfcf;
@@ -80,6 +81,9 @@ body {
 }
 .location i, .location-desktop i {
   margin-right: 10px;
+}
+.location input, .location-desktop input {
+  background-color: #EAEAEA;
 }
 
 .location {
@@ -130,6 +134,50 @@ body {
   .footer_menu {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+.loader_circle {
+  border-top: 10px solid #a45cdc;
+  border-bottom: 10px solid #FF79DA;
+  border-right: 10px solid black;
+  border-left: 10px solid #353535;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loader_logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: auto;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .heart {
@@ -264,7 +312,7 @@ main {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  overflow: hidden;
+  /*overflow: hidden;*/
   cursor: pointer;
   background: white;
   margin-bottom: 10px;
@@ -279,7 +327,7 @@ main {
 .meal:hover .meal_confirm {
   transform: translateX(0px);
 }
-.meal:hover .meal_icon {
+.meal:hover .meal_confirm_icon {
   transform: rotate(0);
 }
 .meal_name {
@@ -289,10 +337,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-overflow: ellipsis;
 }
 .meal_description {
-  overflow: hidden;
+  /*overflow: hidden;*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .meal_price {
   font-weight: bold;
@@ -320,8 +369,8 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 400ms;
+  transform: rotate(360deg);
+  transition-duration: 2000ms;
 }
 
 @media screen and (min-width: 751px) {
@@ -331,6 +380,10 @@ main {
     justify-content: space-between;
     width: calc(100% + 10px + 10px);
     margin-left: -10px;
+  }
+
+  .meal {
+    width: calc( 100% - 40px );
   }
 }
 .line {
@@ -342,7 +395,7 @@ main {
 
 .search {
   background: #f6f6f6;
-  padding: 0px;
+  padding: 30px;
   text-align: center;
 }
 .search_txt1 {
