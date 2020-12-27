@@ -64,17 +64,18 @@ main {
 }
 .choose {   
     margin-bottom: 30px; 
-    display: grid;
+    /*display: grid;*/
     &_title {
         font-size:20px; 
     }
 }
 .meal {
     position: relative;
+    top: 50px;
     display: flex;
     gap: 10px;
     flex-direction: column;
-    /*overflow: hidden;*/
+    overflow: hidden;
     cursor: pointer;
     background: white;
     margin-bottom: 10px;
@@ -83,14 +84,19 @@ main {
     background-color: white;
     box-shadow:0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125); 
     margin: 10px;
-    /*animation: selection 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;*/
-    /*opacity: 0;*/
+    animation: selection 1s cubic-bezier(0, 0, 0, 1) forwards;
+    opacity: 0;
     &:hover &_confirm {
                 transform: translateX(0px); }
     &:hover &_confirm_icon  {
-                transform: rotate(0); }
+                transform: rotate(0); } 
+    &:hover &_price {
+                margin-right: 60px;
+    }
     &_name {
         font-weight: bold;
+        line-height:2rem;
+        width: calc(100% - 60px);
     }
     &_under {
         display: flex;
@@ -98,12 +104,14 @@ main {
         justify-content: space-between;
     }
     &_description {
-        /*overflow: hidden;*/
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        transition: width 400ms, text-overflow 400ms;
     }
     &_price {
         font-weight: bold;
+        transition-duration: 400ms;
     }
     &_confirm {
         position: absolute;
@@ -132,19 +140,32 @@ main {
             transition-duration: 2000ms;
         }
     }
-    
+    &_1 {animation-delay: 0.1s;}
+    &_2 {animation-delay: 0.2s;}
+    &_3 {animation-delay: 0.3s;}
+    &_4 {animation-delay: 0.4s;}
+    &_5 {animation-delay: 0.5s;}
+    &_6 {animation-delay: 0.6s;}
+    &_7 {animation-delay: 0.7s;}
+    &_8 {animation-delay: 0.8s;}
+    &_9 {animation-delay: 0.9s;}
+    &_10 {animation-delay: 1s;}
 }
+
 
 @media screen and (min-width: 751px) {
     .chooseMeal {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: calc(100% + 10px + 10px);
+        justify-content: space-between; 
         margin-left: -10px; 
     }
     .meal {
-        width: calc( 100% - 40px );
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
     }
 }
 

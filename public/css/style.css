@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes selection {
   0% {
-    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(-50px);
   }
 }
 a:visited, a:link, a:active {
@@ -104,7 +105,7 @@ body {
     right: 0;
     display: flex;
     align-self: center;
-    width: 200px;
+    width: 250px;
     height: 50px;
     margin: 25px;
   }
@@ -120,6 +121,27 @@ body {
 .footer a {
   color: #f6f6f6;
   padding: 5px;
+  position: relative;
+  z-index: 1;
+}
+.footer a:hover {
+  color: #FF79DA;
+}
+.footer a:hover::after {
+  opacity: 1;
+}
+.footer a::after {
+  content: "";
+  /******important!!!***/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #FF79DA;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 .footer_icon {
   margin-right: 5px;
@@ -136,10 +158,20 @@ body {
     justify-content: space-around;
   }
 }
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #f6f6f6;
+  animation: loader-page 1500ms ease-in-out normal forwards;
+  z-index: 10;
+}
 .loader_circle {
   border-top: 10px solid #a45cdc;
   border-bottom: 10px solid #FF79DA;
-  border-right: 10px solid black;
+  border-right: 10px solid #f6f6f6;
   border-left: 10px solid #353535;
   border-radius: 50%;
   width: 100px;
@@ -160,7 +192,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 50px;
+  margin: auto;
+  width: 90px;
   height: auto;
 }
 
@@ -180,6 +213,26 @@ body {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes loader-page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    /* z-index: 0;*/
+  }
+}
+@keyframes loader-page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    /* z-index: 0;*/
+  }
+}
 .heart {
   display: flex;
   align-items: center;
@@ -194,7 +247,7 @@ body {
 .heart:hover .heart1 {
   opacity: 1;
 }
-.heart:focus {
+.heart:visited {
   color: red;
 }
 
@@ -301,7 +354,7 @@ main {
 }
 .choose {
   margin-bottom: 30px;
-  display: grid;
+  /*display: grid;*/
 }
 .choose_title {
   font-size: 20px;
@@ -309,10 +362,11 @@ main {
 
 .meal {
   position: relative;
+  top: 50px;
   display: flex;
   gap: 10px;
   flex-direction: column;
-  /*overflow: hidden;*/
+  overflow: hidden;
   cursor: pointer;
   background: white;
   margin-bottom: 10px;
@@ -321,8 +375,8 @@ main {
   background-color: white;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   margin: 10px;
-  /*animation: selection 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;*/
-  /*opacity: 0;*/
+  animation: selection 1s cubic-bezier(0, 0, 0, 1) forwards;
+  opacity: 0;
 }
 .meal:hover .meal_confirm {
   transform: translateX(0px);
@@ -330,8 +384,13 @@ main {
 .meal:hover .meal_confirm_icon {
   transform: rotate(0);
 }
+.meal:hover .meal_price {
+  margin-right: 60px;
+}
 .meal_name {
   font-weight: bold;
+  line-height: 2rem;
+  width: calc(100% - 60px);
 }
 .meal_under {
   display: flex;
@@ -339,12 +398,14 @@ main {
   justify-content: space-between;
 }
 .meal_description {
-  /*overflow: hidden;*/
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: width 400ms, text-overflow 400ms;
 }
 .meal_price {
   font-weight: bold;
+  transition-duration: 400ms;
 }
 .meal_confirm {
   position: absolute;
@@ -372,18 +433,50 @@ main {
   transform: rotate(360deg);
   transition-duration: 2000ms;
 }
+.meal_1 {
+  animation-delay: 0.1s;
+}
+.meal_2 {
+  animation-delay: 0.2s;
+}
+.meal_3 {
+  animation-delay: 0.3s;
+}
+.meal_4 {
+  animation-delay: 0.4s;
+}
+.meal_5 {
+  animation-delay: 0.5s;
+}
+.meal_6 {
+  animation-delay: 0.6s;
+}
+.meal_7 {
+  animation-delay: 0.7s;
+}
+.meal_8 {
+  animation-delay: 0.8s;
+}
+.meal_9 {
+  animation-delay: 0.9s;
+}
+.meal_10 {
+  animation-delay: 1s;
+}
 
 @media screen and (min-width: 751px) {
   .chooseMeal {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: calc(100% + 10px + 10px);
     margin-left: -10px;
   }
 
   .meal {
-    width: calc( 100% - 40px );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 .line {
@@ -414,8 +507,16 @@ main {
   cursor: pointer;
   transition: box-shadow 200ms linear, transform 200ms linear;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 200ms linear, transform 200ms linear;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
   width: 200px;
+}
+.search_button a:hover {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .search_button a:hover {
   transform: scale(0.98);
@@ -456,6 +557,7 @@ main {
   position: absolute;
   left: 0px;
   bottom: 20px;
+  z-index: 2;
 }
 .operation_button_frame {
   margin: 10px;
@@ -466,6 +568,15 @@ main {
   border-radius: 1.5rem;
   background: #f6f6f6;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 200ms linear, transform 200ms linear;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.operation_button_frame:hover {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .operation_button_frame_txt {
   font-weight: bold;
@@ -508,6 +619,14 @@ main {
   height: 250px;
   margin: 10px;
   position: relative;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 200ms linear, transform 200ms linear;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.restaurants_align_button:hover {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .restaurants_align_button_img {
   height: 11rem;

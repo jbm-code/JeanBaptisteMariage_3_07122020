@@ -1,8 +1,17 @@
 .loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: $color2;
+    animation: loader-page 1500ms ease-in-out normal forwards;
+    z-index: 10;
+    
     &_circle {
         border-top: 10px solid $color3;
         border-bottom: 10px solid $color4;
-        border-right: 10px solid $color1;
+        border-right: 10px solid $color2;
         border-left: 10px solid $color6;
         border-radius: 50%;
         width: 100px;
@@ -17,7 +26,8 @@
     &_logo {
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
-        width: 50px;
+        margin: auto;
+        width: 90px;
         height: auto;
     }
 }
@@ -29,4 +39,12 @@
 @keyframes loader {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg);}
+}
+@-webkit-keyframes loader-page {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden;/* z-index: 0;*/ }
+}
+@keyframes loader-page {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden;/* z-index: 0;*/ }
 }

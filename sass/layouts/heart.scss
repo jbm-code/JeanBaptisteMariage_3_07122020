@@ -9,7 +9,7 @@
         animation: grow 250ms; 
         & .heart1 { opacity: 1;}
     }
-    &:focus {
+    &:visited {
         color: red;
     }
 }

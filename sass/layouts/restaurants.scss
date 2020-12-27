@@ -29,7 +29,8 @@
             width: 330px;
             height: 250px;  
             margin: 10px;        
-            position: relative; 
+            position: relative;
+            @include button-animation; 
             
             &_img {
                 height: 11rem;
