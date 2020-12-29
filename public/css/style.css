@@ -92,6 +92,7 @@ body {
 }
 .location input, .location-desktop input {
   background-color: #EAEAEA;
+  width: 100px;
 }
 
 .location {
@@ -126,26 +127,22 @@ body {
   flex-direction: column;
 }
 .footer a {
-  color: #f6f6f6;
+  color: red;
   padding: 5px;
   position: relative;
   z-index: 1;
-}
-.footer a:hover {
-  color: #FF79DA;
 }
 .footer a:hover::after {
   opacity: 1;
 }
 .footer a::after {
   content: "";
-  /******important!!!***/
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  color: #FF79DA;
+  background: blue;
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
