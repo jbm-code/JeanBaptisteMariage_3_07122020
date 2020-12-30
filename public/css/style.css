@@ -501,7 +501,7 @@ main {
   margin-left: 20px;
   margin-top: 0;
 }
-.search_button a {
+.search_button {
   border: none;
   padding: 1rem 1.5rem;
   font-weight: 500;
@@ -517,13 +517,13 @@ main {
   transition: box-shadow 200ms linear, transform 200ms linear;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
-  width: 200px;
+  width: 250px;
 }
-.search_button a:hover {
+.search_button:hover {
   transform: scale(0.98);
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.search_button a:hover {
+.search_button:hover {
   transform: scale(0.98);
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
