@@ -12,17 +12,21 @@
     </head>
  
     <body>
+        <div class="loader">
+            <div class="loader_circle"></div>
+            <img class="loader_logo" src="public/img/logo/ohmyfood.png" alt="logo_ohmyfood">
+        </div>
         <header class="header">
             <img src="public/img/logo/ohmyfood.png" alt="logo_ohmyfood">
             <div class="location-desktop">
                 <i class="fas fa-map-marker-alt local__icon"></i> 
-                <p>Paris, Belleville</p>         
+                <input type="text" placeholder="Paris, Belleville" style="border: hidden; border: 0" maxlength="10">         
             </div>
         </header>
 
         <div class="location">
                 <i class="fas fa-map-marker-alt local__icon"></i> 
-                <p>Paris, Belleville</p>       
+                <input type="text" placeholder="Paris, Belleville" style="border: hidden; border: 0" maxlength="10">      
         </div>
         <main>  
             <section class="search">
@@ -30,37 +34,38 @@
                     <h1 class="search_txt1">Réservez le menu qui vous convient</h1>
                     <p class="search_txt2">Découvrez des restaurants d'expetion, séléctionnés par mos soins</p>
                 </div>
-
-                <button class="search_button">
-                    <a class="search_button_txt" href="index.html">Explorer nos restaurants</a>
-                </button>
+                
+                <a  href="#restaurants">
+                    <span class="search_button">Explorer nos restaurants</span>
+                </a>        
+                    
             </section>
             
             <h2 class="op">Fonctionnement</h2>
             
-            <section class="operation">           
-                <section class="operation_button">
+            <div class="operation">           
+                <div class="operation_button">
                     <p class="operation_button_marker">1</p>
-                    <section class="operation_button_frame">
+                    <div class="operation_button_frame">
                         <i class="operation_button_frame_fas fa-mobile-alt"></i>
                         <p class="operation_button_frame_txt">Choisissez un restaurant</p>
-                    </section>
-                </section>
-                <section class="operation_button">
+                    </div>
+                </div>
+                <div class="operation_button">
                     <p class="operation_button_marker">2</p>
-                    <section class="operation_button_frame">
+                    <div class="operation_button_frame">
                         <i class="operation_button_frame_fas fa fa-list-ul"></i>
                         <p class="operation_button_frame_txt">Composez votre menu</p>
-                    </section>
-                </section>
-                <section class="operation_button">
+                    </div>
+                </div>
+                <div class="operation_button">
                     <p class="operation_button_marker">3</p>
-                    <section class="operation_button_frame">
+                    <div class="operation_button_frame">
                         <i class="operation_button_frame_fas fas fa-store"></i>
                         <p class="operation_button_frame_txt">Dégustez au restaurant</p>
-                    </section>
-                </section>  
-            </section>
+                    </div>
+                </div>  
+            </div>
 
             <section class="restaurants">
                 <header class="restaurants_header">
@@ -69,15 +74,16 @@
                 <div class="restaurants_align">
                     <article class="restaurants_align_button">                
                         <a href="pages-restaurants/La_palette_du_goût.html">
-                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/la palette du gout.jpg">
+                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/la_palette_du_gout.jpg" alt="table chic restaurant">
                                 <p class="restaurants_align_button_new">Nouveau</p>
                             <div class="restaurants_align_button_etiket">
                                 <div class="restaurants_align_button_etiket_left">
-                                    <p class="restaurants_align_button_etiket_left_text3">La palette du goût</p>
+                                    <h3 class="restaurants_align_button_etiket_left_text3">La palette du goût</h3>
                                     <p class="restaurants_align_button_etiket_left_text2">Ménilmontant</p> 
-                                </div> 
-                                <div class="restaurants_align_button_etiket_right">  
-                                <i class="restaurants_align_button_etiket_left_fas fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="heart" >
+                                    <i class="heart2 far fa-heart" aria-hidden="true"></i>
+                                    <i class="heart1 fas fa-heart" aria-hidden="true"></i>
                                 </div>  
                             </div>
                         </a>
@@ -85,15 +91,16 @@
 
                     <article class="restaurants_align_button">    
                         <a href="pages-restaurants/La_note_enchantée.html">
-                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/la note enchantée1.jpg">
+                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/la_note_enchantée1.jpg" alt="table chic restaurant" >
                                 <p class="restaurants_align_button_new">Nouveau</p>
                             <div class="restaurants_align_button_etiket">
                                 <div class="restaurants_align_button_etiket_left">
-                                    <p class="restaurants_align_button_etiket_left_text3">La note enchantée</p>
+                                    <h3 class="restaurants_align_button_etiket_left_text3">La note enchantée</h3>
                                     <p class="restaurants_align_button_etiket_left_text2">Charonne</p> 
                                 </div> 
-                                <div class="restaurants_align_button_etiket_right">  
-                                <i class="restaurants_align_button_etiket_left_fas fa fa-heart-o" aria-hidden="true"></i>
+                                <div class="heart" >
+                                    <i class="heart2 far fa-heart" aria-hidden="true"></i>
+                                    <i class="heart1 fas fa-heart" aria-hidden="true"></i>
                                 </div>  
                             </div>
                         </a>
@@ -101,37 +108,55 @@
 
                     <article class="restaurants_align_button">
                         <a href="pages-restaurants/A_la_francaise.html">
-                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/a la francaise.jpg">
-                                <p class="restaurants_align_button_new">Nouveau</p>
+                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/a_la_francaise.jpg" alt="table chic restaurant">
                             <div class="restaurants_align_button_etiket">
                                 <div class="restaurants_align_button_etiket_left">
-                                    <p class="restaurants_align_button_etiket_left_text3">À la française</p>
+                                    <h3 class="restaurants_align_button_etiket_left_text3">À la française</h3>
                                     <p class="restaurants_align_button_etiket_left_text2">Cité Rouge</p> 
                                 </div> 
-                                <div class="restaurants_align_button_etiket_right">  
-                                <i class="restaurants_align_button_etiket_left_fas fa fa-heart-o" aria-hidden="true"></i>
+                                <div class="heart" >
+                                    <i class="heart2 far fa-heart" aria-hidden="true"></i>
+                                    <i class="heart1 fas fa-heart" aria-hidden="true"></i>
                                 </div>  
                             </div>
                         </a>
                     </article> 
 
                     <article class="restaurants_align_button">
-                        <a href="pages-restaurants/Le délice des sens.html">
-                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/le delice des sens.jpg">
-                                <p class="restaurants_align_button_new">Nouveau</p>
+                        <a href="pages-restaurants/Le_délice_des_sens.html">
+                            <img class="restaurants_align_button_img" src="public/img/restaurants/restaurants_mini/le_delice_des_sens.jpg" alt="table chic restaurant">
                             <div class="restaurants_align_button_etiket">
                                 <div class="restaurants_align_button_etiket_left">
-                                    <p class="restaurants_align_button_etiket_left_text3">Le délice des sens</p>
+                                    <h3 class="restaurants_align_button_etiket_left_text3">Le délice des sens</h3>
                                     <p class="restaurants_align_button_etiket_left_text2">Folie-Méricourt</p> 
                                 </div> 
-                                <div class="restaurants_align_button_etiket_right">  
-                                <i class="restaurants_align_button_etiket_left_fas fa fa-heart-o" aria-hidden="true"></i>
+                                <div class="heart" >
+                                    <i class="heart2 far fa-heart" aria-hidden="true"></i>
+                                    <i class="heart1 fas fa-heart" aria-hidden="true"></i>
                                 </div>  
                             </div>
                         </a>
-                    </article>    
+                    </article>                    
                 </div>            
-            </section>
-        </main>    
+            </section>        
+        </main>
+        
+        <footer class="footer">
+            <div class="footer_container">
+                <div class= "footer_logo">
+                    <img src="public/img/logo/ohmyfood2.png" alt="logo_ohmyfood">
+                </div>
+                <div class="footer_menu">
+                    <a href="#">
+                        <i class="footer_icon fa-utensils fas" aria-hidden="true">                        
+                        </i>   Proposer un restaurant</a>                                   
+                    <a href="#">
+                        <i class="footer_icon fas fa-hands-helping" aria-hidden="true">
+                        </i>   Devenir Partenaire</a> 
+                    <a href="#">Mention légales</a>
+                    <a href="mailto:contact@ohmyfood.com">Contact</a>
+                </div>
+            </div>    
+        </footer>
     </body>
  </html>       

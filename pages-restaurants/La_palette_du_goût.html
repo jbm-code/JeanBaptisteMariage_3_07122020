@@ -17,12 +17,12 @@
 
     <main>                  
         <div class="background-resto">
-                <img src="../public/img/restaurants/restaurants_mini/la palette du gout.jpg" alt="table chique saumon salade">
+                <img src="../public/img/restaurants/restaurants_mini/la_palette_du_gout.jpg" alt="table chique saumon salade">
         </div>
 
         <section class="menu">   
             <div class="menu_header">
-                <h4>La palette du goût</h4>
+                <h4 class="menu_title">La palette du goût</h4>
                 <div class="heart" >
                     <i class="heart2 far fa-heart" aria-hidden="true"></i>
                     <i class="heart1 fas fa-heart" aria-hidden="true"></i>
@@ -32,8 +32,8 @@
             <div class="choose">
                 <div class="choose_title">ENTRÉES</div>
                 <div class="line"></div>
-                <div class="meal">
-                    <div class="etiket meal_1">
+                <div class="chooseMeal">
+                    <div class="meal meal_1">
                         <div class="meal_name">Fricassée d'escargot</div>
                         <div class="meal_under">
                             <div class="meal_description">Au piment d'Espelette</div>
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_2">
+                    <div class="meal meal_2">
                         <div class="meal_name">Foie gras de canard mi-cuit</div>
                         <div class="meal_under">
                             <div class="meal_description">et ses copeaux de truffe noire</div>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_3">
+                    <div class="meal meal_3">
                         <div class="meal_name">Oeufs au plat</div>
                         <div class="meal_under">
                             <div class="meal_description">Assaisonné à la truffe sur lit de roquette</div>
@@ -79,8 +79,8 @@
             <div class="choose">
                 <div class="choose_title">PLATS</div>
                 <div class="line"></div>
-                <div class="meal">
-                    <div class="etiket meal_4">
+                <div class="chooseMeal">
+                    <div class="meal meal_4">
                         <div class="meal_name">Filet de boeuf aux herbes</div>
                         <div class="meal_under">
                             <div class="meal_description">Accompagné de sa ribambelle de légumes</div>
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_5">
+                    <div class="meal meal_5">
                         <div class="meal_name">Parmentier de queue de boeuf</div>
                         <div class="meal_under">
                             <div class="meal_description">À la truffe noire sur sa purée de panais</div>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_6">
+                    <div class="meal meal_6">
                         <div class="meal_name">Filet de Turbot</div>
                         <div class="meal_under">
                             <div class="meal_description">Aux agrumes</div>
@@ -125,8 +125,8 @@
             <div class="choose">
                 <div class="choose_title">DESSERTS</div>
                 <div class="line"></div>
-                <div class="meal">
-                    <div class="etiket meal_7">
+                <div class="chooseMeal">
+                    <div class="meal meal_7">
                         <div class="meal_name">Paris-Brest</div>
                         <div class="meal_under">
                             <div class="meal_description">Revisité</div>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_8">
+                    <div class="meal meal_8">
                         <div class="meal_name">Macaron au chocolat d'exception</div>
                         <div class="meal_under">
                             <div class="meal_description">Et glace à la vanille de Madagascar</div>
@@ -152,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="etiket meal_9">
+                    <div class="meal meal_9">
                         <div class="meal_name">Mousse au chocolat</div>
                         <div class="meal_under">
                             <div class="meal_description">Au piment d'espelette et à la truffe noire</div>
@@ -164,13 +164,34 @@
                                 <i class="fas fa-check-circle" aria-hidden="true"></i>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-            </div>                        
+            </div>       
+            <div class="search">                        
+                <a  href="#restaurants">
+                    <span class="search_button">Commander</span>
+                </a>                                    
+            </div>      
+                                      
         </section>
     </main>
-    
-    
-    
+        
+    <footer class="footer">
+        <div class="footer_container">
+            <div class= "footer_logo">
+                <img src="../public/img/logo/ohmyfood2.png" alt="logo_ohmyfood">
+            </div>
+            <div class="footer_menu">
+                <a href="#">
+                    <i class="footer_icon fa-utensils fas" aria-hidden="true">                        
+                    </i>   Proposer un restaurant</a>                                   
+                <a href="#">
+                    <i class="footer_icon fas fa-hands-helping" aria-hidden="true">
+                    </i>   Devenir Partenaire</a> 
+                <a href="#">Mention légales</a>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
+            </div>
+        </div>    
+    </footer>
 </body>
-</html>
+</html> 

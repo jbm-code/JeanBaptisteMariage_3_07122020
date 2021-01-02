@@ -1,0 +1,50 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: $color2;
+    animation: loader-page 1500ms ease-in-out normal forwards;
+    z-index: 10;
+    
+    &_circle {
+        border-top: 10px solid $color3;
+        border-bottom: 10px solid $color4;
+        border-right: 10px solid $color2;
+        border-left: 10px solid $color6;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: loader 2s linear infinite;
+        -o-animation: loader 2s linear infinite;
+        animation: loader 2s linear infinite;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+    &_logo {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto;
+        width: 90px;
+        height: auto;
+    }
+}
+
+@-webkit-keyframes loader {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg);}
+}
+@keyframes loader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
+@-webkit-keyframes loader-page {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+@keyframes loader-page {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
