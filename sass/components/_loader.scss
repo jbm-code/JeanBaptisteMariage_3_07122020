@@ -42,9 +42,9 @@
 }
 @-webkit-keyframes loader-page {
     0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden;/* z-index: 0;*/ }
+    100% { opacity: 0; visibility: hidden; }
 }
 @keyframes loader-page {
     0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden;/* z-index: 0;*/ }
+    100% { opacity: 0; visibility: hidden; }
 }

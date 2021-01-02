@@ -9,15 +9,12 @@
         animation: grow 250ms; 
         & .heart1 { opacity: 1;}
     }
-    &:visited {
-        color: red;
-    }
 }
 .heart2 {
     color: black;
     font-size: 25px;
     position: absolute;
-    z-index:3 ;                 
+    z-index:2 ;                 
 }
 .heart1 {
     color:  rgb(164,92,220);
@@ -25,13 +22,6 @@
     position: absolute;
     z-index:1 ;
     opacity: 0;
-}
-.heart3 {
-    color:  red;
-    font-size: 25px;
-    position: absolute;
-    z-index:2 ;
-    display: none;
 }
 @keyframes grow {
     0% {

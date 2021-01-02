@@ -7,21 +7,14 @@ $color6: rgb(53,53,53);
 $font1: "Roboto", sans-serif;
 $font2: "Shrikhand", cursive;
 
-@mixin button {
-    border: none;
+@mixin button {   
     padding: 1rem 1.5rem;
     font-weight: 500;
     font-size: 1rem;
     border-radius: 100px;
     color: white;
+    width: 200px;
     background: linear-gradient(to top left, $color3, $color4);
-    cursor: pointer;
-    transition: box-shadow 200ms linear, transform 200ms linear;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    &:hover {
-        transform: scale(0.98);
-        box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.2);
-    }
 }
 @mixin button-animation {
     border: none;
@@ -31,21 +24,5 @@ $font2: "Shrikhand", cursive;
     &:hover {
         transform: scale(0.98);
         box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.2);
-    }
-}
-@mixin change-color {
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-    &::after {
-        content:"";      /******important!!!***/
-        position : absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        color: $color4/*radial-gradient( circle, lighten($color4, 5) 0%, darken($color4, 10) 100%)*/;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
     }
 }
