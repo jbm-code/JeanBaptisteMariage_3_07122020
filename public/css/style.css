@@ -391,10 +391,16 @@ main {
 .meal:hover .meal_price {
   margin-right: 60px;
 }
+.meal:hover .meal_name {
+  width: calc(100% - 60px);
+}
 .meal_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-weight: bold;
   line-height: 2rem;
-  width: calc(100% - 60px);
+  transition: width 400ms, text-overflow 400ms;
 }
 .meal_under {
   display: flex;
