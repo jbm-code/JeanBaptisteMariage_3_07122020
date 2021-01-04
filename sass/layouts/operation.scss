@@ -10,8 +10,7 @@
     &_button {
         @include button;
         @include button-animation;
-        display: inline-block;
-        width: 180px;       
+               
     } 
 }
 .op {

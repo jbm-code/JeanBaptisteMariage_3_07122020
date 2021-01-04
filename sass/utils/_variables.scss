@@ -8,6 +8,7 @@ $font1: "Roboto", sans-serif;
 $font2: "Shrikhand", cursive;
 
 @mixin button {   
+    display: inline-block;
     padding: 1rem 1.5rem;
     font-weight: 500;
     font-size: 1rem;

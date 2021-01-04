@@ -89,7 +89,6 @@ img {
     box-shadow:0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125); 
     margin: 10px;
     animation: selection 1s cubic-bezier(0, 0, 0, 1) forwards;
-    opacity: 0;
     &:hover &_confirm {
                 transform: translateX(0px); }
     &:hover &_confirm_icon  {
